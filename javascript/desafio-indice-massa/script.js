@@ -1,0 +1,66 @@
+var nomeUsuario = prompt('Digite seu Nome: ');
+var alturaUsuario = parseFloat(prompt('Informe sua Altura em centímetros: '));
+var pesoUsuario = parseFloat(prompt('Informe seu peso: '));
+// alturaUsuario = parseFloat(alturaUsuario);
+// pesoUsuario = parseFloat(pesoUsuario);
+alturaUsuario /= 100; /* Converte a altura recebida em centímetros para metros */
+
+var massa = pesoUsuario / (alturaUsuario * alturaUsuario);
+//calculoMassa = parseFloat(calculoMassa);]
+var calculoMassa = parseFloat(massa.toFixed(2));
+
+function classificacao() {
+    if (calculoMassa < 16) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Baixo peso muito grave');
+    } else if (calculoMassa >= 16 && calculoMassa <= 16.99) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Baixo peso grave');
+    } else if (calculoMassa >= 17 && calculoMassa <= 18.49) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Baixo peso');
+    } else if (calculoMassa >= 18.50 && calculoMassa <= 24.99) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Peso normal');
+    } else if (calculoMassa >= 25 && calculoMassa <= 29.99) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Sobrepeso');
+    } else if (calculoMassa >= 30 && calculoMassa <= 34.99) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Obesidade grau I');
+    } else if (calculoMassa >= 35 && calculoMassa <= 39.99) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Obesidade grau II');
+    } else if (calculoMassa >= 40) {
+        document.write( nomeUsuario + ' possui índice de massa corporal igual a ' + calculoMassa + ', sendo classificado como: Obesidade grau III');
+    } else {
+        alert('Algo deu errado!');
+    }
+}
+classificacao();
+
+/* SEGUNDA FORMA DE SE FAZER O DESAFIO */
+//recebe os parâmetros
+// var nome = prompt('Informe o nome da pessoa');
+// var altura = prompt('Informe a altura da pessoa em centímetros');
+// var peso = prompt('Informe o pessoa da pessoa');
+// //converte as cadeias de caracteres para dados do tipo float
+// altura = parseFloat(altura);
+// peso = parseFloat(peso);
+// //abaixo é feito a conversão da altura de centímetros para metros
+// altura = altura / 100;
+// //realiza o cálculo de img
+// var imc = peso / (altura * altura);
+// //testes condicionais para identificar a classificação do peso com base no imc
+// var classificacao = '';
+// if(imc < 16){
+// classificacao = 'Baixo peso muito grave';
+// } else if(imc >= 16 && imc <= 16.99){
+// classificacao = 'Baixo peso grave';
+// } else if(imc >= 17 && imc <= 18.49){
+// classificacao = 'Baixo peso';
+// } else if(imc >= 18.50 && imc <= 24.99){
+// classificacao = 'Peso normal';
+// } else if(imc >= 25 && imc <= 29.99){
+// classificacao = 'Sobrepeso';
+// } else if(imc >= 30 && imc <= 34.99){
+// classificacao = 'Obesidade grau I';
+// } else if(imc >= 35 && imc <= 39.99){
+// classificacao = 'Obesidade grau II';
+// } else { 
+//     classificacao = 'Obesidade grau III';
+// }
+// document.write(nome + ' possui índice de massa corporal igual a ' + imc + ' sendo classificado como: ' + classificacao);
