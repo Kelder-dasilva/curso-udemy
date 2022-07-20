@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .entrada1 {
+            background-color: white;
+            padding: 10px;
+        }
+    </style>
+<body>
+
+    <input type="text" class="entrada1" placeholder="Digite caracter aqui" id="entrada" onfocus="alteraCorFocus()" onblur="voltaPadrao(), contaCaracter()">
+
+    <hr><br><br>
+
+    <input id="campo" type="text" onfocus="acionaCampo()" onblur="validaCampo()" />
+
+</body>
+    <script>
+        function alteraCorFocus() {
+            var alteraCor = document.getElementById('entrada');
+            alteraCor.style.backgroundColor = 'yellow';
+        }
+        function voltaPadrao() {
+            var voltaCorPadrao = document.getElementById('entrada');
+            voltaCorPadrao.style.backgroundColor = 'white';
+        }
+
+        function contaCaracter() {
+            var caracter = document.getElementById('entrada').value;
+            if( caracter.length < 3) {
+                var alteraCor2 = document.getElementById('entrada').style.backgroundColor = 'red';
+                caracter = alteraCor2;
+            } else if (caracter.length >= 3) {
+                var alteraCor3 = document.getElementById('entrada').style.backgroundColor = 'green';
+                caracter = alteraCor3;
+            } else {
+                alert('deu ruim')
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///SEGUNDA MANEIRA DE FAZER
+        function acionaCampo() {
+            document.getElementById('campo').style.background = "yellow"
+        }
+        function validaCampo() {
+            var valorCampo = document.getElementById('campo').value
+            if(valorCampo.length < 3) {
+                document.getElementById('campo').style.background = "red"
+            } else {
+                document.getElementById('campo').style.background = "green"
+            }
+        }
+    </script>
+</html>
