@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <script>
+        var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria'];
+
+        for(var x in listaConvidados) {
+            document.write('Índice ' + x + ' valor ' + listaConvidados[x] + '<br>');
+        }
+        document.write('<hr><br>');
+
+        var listaConvidados1 = Array();
+        listaConvidados1['a'] = 'Jorge';
+        listaConvidados1[10] = 'Jamilton';
+        listaConvidados1['zebra'] = 'José';
+        listaConvidados1[-1] = 'Ana';
+        listaConvidados1[true] = 'Maria';
+
+        for(var x in listaConvidados1) {
+            document.write('Índice ' + x + ' valor ' + listaConvidados1[x] + '<br>');
+        }
+    </script>
+</body>
+</html>

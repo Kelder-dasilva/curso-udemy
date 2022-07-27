@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(49, 49, 49); color: white;">
+    <script>
+       
+        /*for(var y = 1; y <= 10; y++) {
+            for(var x = 1; x <= 10; x++) {
+                document.write(y + ' x ' + x + ' = ' + (y * x) + '<br>');
+            }
+            document.write('<hr>')
+        }*/
+
+        var x = 1;
+        var y = 1;
+        while (x <= 10) {
+            y = 1;
+            while (y <= 10) {
+                console.log(x + ' x ' + y + ' = ' + x * y);
+                document.write(x + ' x ' + y + ' = ' + x * y);
+                y++;
+            }
+            console.log("\n");
+            document.write("<hr/>");
+            x++;
+        }
+
+    </script>
+</body>
+</html>
