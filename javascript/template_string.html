@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let nome = 'Kelder';
+        console.log(`Oi ${nome}, tudo bem?`);
+
+        function calcular(x, y) {
+            return x * y;
+        }
+        console.log(`O resultado entre 5 x 5 é: ${calcular(5,5)}`);
+
+        //////////////////////////////////////////////função com paramentro default
+        function paramDefault(nome='Kelder', emprego='Programador') {
+            //var nome = prompt('Digite seu nome: ');
+            //var emprego = prompt('Digite o emprego: ');
+            document.write(`Oi ${nome}, tudo bem? Queria te informar que você foi aprovado para a vaga de ${emprego}.`)
+        }
+        paramDefault();
+        document.write('<br/><hr/>')
+        /////////////////////////////////////////////arrow function
+        let quadrado = function(x = 2) {
+            return x * x;
+        }
+        document.write(quadrado(3));
+        document.write('<br/>');
+        
+        let quadrado1 = (x = 2) => {
+            return x * x;
+        }
+        document.write(quadrado1(2));
+        document.write('<br/>');
+
+        let quadrado2 = x => x * x;
+        document.write(quadrado2(5));
+        document.write('<br/><hr/>')
+
+        // let parOuImpar = function(numero) {
+        //     if(numero % 2 === 0) {
+        //         return 'Par';
+        //     } else {
+        //         return 'Impar'
+        //     }
+        // }
+        // document.write(parOuImpar())
+
+        let parOuImpar = numero => numero % 2 === 0 ? 'Par' : 'Impar';
+        document.write(parOuImpar(3));
+    </script>
+</body>
+</html>
